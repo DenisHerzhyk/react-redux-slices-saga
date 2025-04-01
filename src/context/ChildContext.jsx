@@ -1,6 +1,6 @@
 import {useContext} from "react";
 import React from 'react';
-import {NumberContext, PriorityColorContext} from "./context.jsx";
+import {NumberContext, PriorityColorContext} from "./context.js";
 import ChildContext2 from "./ChildContext2.jsx";
 
 const ChildContext = () => {
