@@ -2,7 +2,7 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import store from './redux/store.js';
+import store from './redux/store.ts';
 import {Provider} from 'react-redux'
 import {ThemeContext, LanguageContext, PriorityColorContext} from "./context/context.js";
 import AppContext from "./context/AppContext.jsx";

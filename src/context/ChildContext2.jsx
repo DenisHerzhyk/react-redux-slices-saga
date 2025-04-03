@@ -1,15 +1,15 @@
 import {useContext} from "react";
 import React from 'react';
 import {FloatContext, LanguageContext, PriorityColorContext, ThemeContext} from "./context.js";
-import {useDispatch} from "react-redux";
-import {increment, decrement} from '../redux/action.js';
+import {useAppDispatch} from "../redux/store.js";
+import {decrementAsync, incrementAsync} from "../redux/counterSlice";
 
 const ChildContext2 = () => {
     const theme = useContext(ThemeContext);
     const priorityColor = useContext(PriorityColorContext)
     const language = useContext(LanguageContext);
     const float = useContext(FloatContext);
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     return (
         <>
             <div className="AppContext" style={{backgroundColor: theme}}>
@@ -17,8 +17,8 @@ const ChildContext2 = () => {
                 <p>We currently on height: <span style={{color: priorityColor}}>{float}m.</span></p>
                 <div>
                     <span>SEND IT TO PARENT: </span>
-                    <button className="ClickContext" onClick={() => dispatch(increment())}>+</button>
-                    <button className="ClickContext" onClick={() => dispatch(decrement())}>-</button>
+                    <button className="ClickContext" onClick={() => dispatch(incrementAsync())}>+</button>
+                    <button className="ClickContext" onClick={() => dispatch(decrementAsync())}>-</button>
                 </div>
             </div>
         </>
