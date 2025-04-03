@@ -15,7 +15,7 @@ npm run dev
 This project consists of the following containers:
 
 - **context** folder - contains contexts and actions from **redux** folder with child components. 
-- **redux** folder - contains action, reducer, store and actionTypes of counter
+- **redux** folder - contains counterSagas, counterSlice, middleware and store
 - **ChildContext2.jsx** - contains button which receives action from **redux** folder and either increment or decrement the count variable and sends updated current state of this value.
 - **AppContext.jsx** - receives state of count and displays result
 
